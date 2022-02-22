@@ -1,0 +1,225 @@
+body{
+    height: fit-content;
+}
+
+*::selection{
+    background-color: #871214;
+    color: #fff;
+}
+.fas-size{
+    font-size: 1.6rem;
+    margin-top: 5px;
+}
+/* /Navbar design/ */
+#navbar
+{
+    position: fixed;
+    background-color: #871214;
+    height: 200vh !important;
+    width: 20vw;
+}
+
+#navbar h1{
+    color: #fff;
+}
+
+#navbar ul{
+    padding: 0;
+    list-style: none;
+    color: #fff;
+}
+
+#navbar li{
+    cursor: pointer;
+}
+.size li {
+    font-size: 1.2rem;
+}
+
+/* /Buttons/ */
+
+#change{
+    transition: all 0.5s;
+    border: none;
+    background-color: orange;
+    padding: 1vw 2vh;
+    color: #fff;
+}
+
+#change:hover{
+    color: #fff
+}
+
+#log-in:hover{
+    color: #fff;
+}
+
+#log-in{
+    transition: all 0.5s;
+    padding: 1vw 2vh;
+    background-color: orange;
+    border: none;
+    color: #fff;
+    /* width: 70vw; */
+}
+
+#logout{
+    border: none;
+    transition-property: all;
+    transition-duration: 0.5s;
+    background-color: transparent;
+    color: #fff;
+    padding: 0;
+}
+
+
+#logout:hover , a:hover{
+    padding: 0 1vw;
+    color: yellow;
+}
+
+#addButton{
+    transition: all 0.5s;
+    border: none;
+    background-color: orange;
+    padding: 1vw 2vh;
+    color: #fff;
+}
+
+#addType{
+    transition: all 0.5s;
+    border: none;
+    background-color: orange;
+    color: #fff;
+}
+
+#addButton:hover, #search:hover, #addType:hover{
+    color: #fff;
+}
+
+#removeButton:hover{
+    color: #fff;
+}
+
+#search{
+    position: absolute;
+    transition: all 0.5s;
+    right: 10px;
+    border: none;
+    background-color: orange;
+    padding: 0.2vw 2vh;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+#removeBook, #close, #removeButton
+{
+    transition: all 0.5s;
+    border: none;
+    background-color: orange;
+    padding: 0.2vw 2vh;
+    color: #000;
+}
+#toggle{
+    background: transparent;
+    border: none;
+}
+/* /Search/ */
+
+#searchPart
+{
+    padding: 0;
+    display: flex;
+}
+
+#notFound{
+    display: none;
+    background-color: #871214;
+    color: #fff;
+    padding: 1vw 2vh;
+}
+
+#searchingFor{
+    border-radius: 10px ;
+    width: 250px;
+    border: 3px groove #871214;
+}
+
+#searchingFor:focus{
+    border: none;
+}
+
+#searchContainer{
+    position: relative;
+}
+
+/* /End of categorizes/ */
+
+#body{
+    margin-top: auto;
+    background-color: #fff;
+    padding: 1vw 2vh;
+}
+
+#main{
+    height: 100vh;
+}
+
+h1{
+    cursor: default;
+}
+
+a{
+    transition-property: all;
+    transition-duration: 0.4s;
+    color: #fff;
+    text-decoration: none;
+}
+
+#bookId
+{
+    visibility: hidden;
+}
+
+hr{
+    color: orange;
+}
+
+.icon{
+    margin-right: 20px;
+}
+
+table{
+    transition: all;
+}
+
+.thead{
+    background-color: #871214;
+    color: #fff;
+}
+
+.btn-primary
+{
+    background-color:#FF8B00 ;
+    border: none;
+
+}
+
+.btn-primary:hover, #removeButton:hover
+{
+    background-color: #a40606;
+background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+
+}
+
+#resultContainer{
+    max-height: 300px;
+    overflow: auto;
+}
+
+/* #books{
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+} */

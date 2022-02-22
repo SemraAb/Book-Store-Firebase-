@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
+    <link rel="icon" type="image/svg" href="./assets/icon/logo.svg" />
+
+    <script src="./assets/index.js" type="module" defer></script>
+    <script src="./assets/dNumbers.js" type="module" defer></script>
+    <title>Home | Library Book Store</title>
+</head>
+
+<body>
+    <header class="bg-white">
+        <div class="container ">
+            <div class="navbar navbar-expand-lg mt-3 px-0">
+                <a class="navbar-brand" href="#"> <img src="./assets/icon/logo-color.svg" alt=""> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars" style="color:#720418; font-size:28px;"></i>
+                    </span>
+
+                </button>
+                <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                    <ul class=" w-100 justify-content-center navbar-nav ">
+                        <li class="nav-item"><a href="./index.html" class="nav-link text-dark active">Home</a></li>
+                        <li class="nav-item"><a href="catalog.html" class="nav-link text-dark "> Catalog</a></li>
+                        <li class="nav-item"><a href="./about.html" class="nav-link text-dark ">About Store</a></li>
+                        <li class="nav-item"><a href="./contact.html" class="nav-link text-dark ">Contact Us</a></li>
+                        <li class="nav-item"><a href="./search.html" class="nav-link text-dark">Search </a></li>
+                    </ul>
+                    <div onclick="unsetStatus()" class="btn d-flex align-items-center" data-toggle="modal"
+                        data-target="#exampleModal"> <img src="./assets/icon/user.svg" alt=""> <span class="ml-1 mt-1">
+                            Join </span> </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <div class="modal-body ">
+                    <div class="h1 modal-title mb-4 font-weight-bold text-center">Join Us</div>
+                    <form method="post">
+                        <div class="form-group "> <input type="text" placeholder="Full Name"
+                                class="form-control form-control-lg" id="joinBookFullName"> </div>
+                        <div class="form-group my-4"> <input type="email" placeholder="Email"
+                                class="form-control form-control-lg" id="joinBookEmail"> </div><button id="joinBookBtn"
+                            type="button" class="w-100 btn bg-orange btn-lg text-white btn-block btn-primary">Join</button>
+                        <div class="alert alert-danger mt-4 join-error text-center" id="join-error" role="alert"
+                            style="display: none;">
+                            <h4 class="alert-heading">Error</h4>
+                            <p></p>
+                            <p class="mb-0">Please check the form again</p>
+                        </div>
+                        <div class="alert alert-success mt-4 join-success text-center" id="join-success" role="alert"
+                            style="display: none;">
+                            <h4 class="alert-heading">Successful</h4>
+                            <p></p>
+                            <p class="mb-0">Welcome to the library</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main my-5 pt-5">
+        <div class="container">
+            <div class="row justify-content-between ">
+                <div class="col-md-5 col-12 my-5 p-5">
+                    <h2>Books from A to Z</h2>
+                    <p>In our store you can find a book for every taste. A large assortment. Nice prices. Interesting
+                        stories.</p>
+                    <button type="button" class="btn btn-primary"> <a href="catalog.html"
+                            class="text-white text-decoration-none">Go to Catalog!</a></button>
+                </div>
+                <div class="col-md-6 col-12">
+                    <img src="./assets/img/image.png" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="catalog mb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="text-center col-12 mb-5">Catalog</h2>
+                    <div class="col-md-12">
+                        <div class="row" id="catalog-home-list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about mb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="col-12 text-center mb-5">About Store</h2>
+                    <div class="col-12">
+                        <div class="row text-center d-flex justify-content-center">
+                            <div class="col-md-3 col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4" id="users"></div>
+                                    <div class="h6">Users</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4" id="bookNum"></div>
+                                    <div class="h6">Books</div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <div class="d-flex align-items-center">
+                                    <div class="display-4 font-weight-bolder mr-4" id="types"></div>
+                                    <div class="h6">Book types</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="delivery">
+            <div class="container">
+                <div class="row">
+                    <h2 class="col-12 text-center my-5">Delivery</h2>
+                    <p class="text-center">We work without holidays and weekends! Residents of Kiev can receive an order
+                        on the day of its registration. Customers from other cities of Ukraine can receive an order
+                        within 1-5 days, depending on the location of the settlement and the selected delivery method.
+                        Orders over UAH 1000 are delivered free of charge *. You can see the available methods, exact
+                        terms and cost of delivery during checkout in the order basket, after selecting the delivery
+                        city. More details</p>
+                </div>
+            </div>
+        </div>
+        <div class="follow mb-5">
+            <div class="container">
+
+                <h2 class="col-12 text-center my-5">Follow us on social media!</h2>
+                <div class="row text-center">
+                    <div class="follow-icons col-12 text-center">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-3x ml-5"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fab fa-instagram fa-3x ml-5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <img src="./assets/icon/logo-group.svg" alt="">
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="row">
+                            <div class="col-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent">Popular</li>
+                                    <li class="list-group-item bg-transparent">A second item</li>
+                                    <li class="list-group-item bg-transparent">A third item</li>
+                                    <li class="list-group-item bg-transparent">And a fifth one</li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent">Popular</li>
+                                    <li class="list-group-item bg-transparent">A second item</li>
+                                    <li class="list-group-item bg-transparent">A third item</li>
+                                    <li class="list-group-item bg-transparent">And a fifth one</li>
+                                </ul>
+                            </div>
+                            <div class="col-4">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-transparent">Popular</li>
+                                    <li class="list-group-item bg-transparent">A second item</li>
+                                    <li class="list-group-item bg-transparent">A third item</li>
+                                    <li class="list-group-item bg-transparent">And a fifth one</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/72fc72c8e8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

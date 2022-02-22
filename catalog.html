@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Slick Css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <!-- Font awsome  -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg" href="./assets/icon/logo.svg" />
+
+    <script src="./assets/catalog.js" type="module" defer></script>
+    <script src="./assets/index.js" type="module" defer></script>
+    <title>Catalog | Library Book Store</title>
+</head>
+
+<body>
+    <header class="bg-white">
+        <div class="container ">
+            <div class="navbar navbar-expand-lg mt-3 px-0">
+                <a class="navbar-brand" href="#"> <img src="./assets/icon/logo-color.svg" alt=""> </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars" style="color:#720418; font-size:28px;"></i>
+                    </span>
+
+                </button>
+                <div class="collapse navbar-collapse text-center" id="navbarNavAltMarkup">
+                    <ul class=" w-100 justify-content-center navbar-nav ">
+                        <li class="nav-item"><a href="./index.html" class="nav-link text-dark">Home</a></li>
+                        <li class="nav-item"><a href="catalog.html" class="nav-link text-dark active"> Catalog</a></li>
+                        <li class="nav-item"><a href="./about.html" class="nav-link text-dark">About Store</a></li>
+                        <li class="nav-item"><a href="./contact.html" class="nav-link text-dark ">Contact Us</a></li>
+                        <li class="nav-item"><a href="./search.html" class="nav-link text-dark">Search </a></li>
+                    </ul>
+                    <div class="btn d-flex align-items-center" data-toggle="modal" data-target="#exampleModal"> <img
+                            src="./assets/icon/user.svg" alt=""> <span class="ml-1 mt-1"> Join </span> </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content p-4">
+                <div class="modal-body ">
+                    <div class="h1 modal-title mb-4 font-weight-bold text-center">Join Us</div>
+                    <form method="post">
+                        <div class="form-group "> <input type="text" placeholder="Full Name"
+                                class="form-control form-control-lg" id="joinBookFullName"> </div>
+                        <div class="form-group my-4"> <input type="email" placeholder="Email"
+                                class="form-control form-control-lg" id="joinBookEmail"> </div><button id="joinBookBtn"
+                            type="button" class="w-100 btn bg-orange btn-lg text-white btn-block btn-primary">Join</button>
+                        <div class="alert alert-danger mt-4 join-error text-center" id="join-error" role="alert"
+                            style="display: none;">
+                            <h4 class="alert-heading">Error</h4>
+                            <p></p>
+                            <p class="mb-0">Please check the form again</p>
+                        </div>
+                        <div class="alert alert-success mt-4 join-success text-center" id="join-success" role="alert"
+                            style="display: none;">
+                            <h4 class="alert-heading">Successful</h4>
+                            <p></p>
+                            <p class="mb-0">Welcome to the library</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="main my-5 pt-5 ">
+        <div class="catalog-carousel">
+            <div class="catalog-header mb-5">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <h2 class='col-3 pt-3 text-center'>All Boooks</h2>
+                        <div class="col-8">
+                            <!-- <div class=" book-catalog d-flex flex-row"> -->
+                                <!-- <ul class="nav p-4" id="categories">
+
+                                </ul> -->
+                            <!-- </div> -->
+                            <ul class="nav p-4 book-catalog catalog-header-carousel justify-content-evenly" id="categories"></ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="general-carousel carousel">
+                <div class="container">
+                    <div class=" all-books tab-content ">
+                        <div class="container">
+                            <div class="row catalog-page-carousel justify-content-around" id="all-books">
+                                <div id="loadingAll"><img src="./assets/img/Spinner-1s-200px.gif" /></div>
+                            </div>
+                        </div>
+                        <div class="bestseller-carousel carousel my-5  ">
+                            <h2 class="text-center mb-5">Best Seller</h2>
+                            <div class="row catalog-page-carousel justify-content-around  " id="best-seller">
+                                <div id="loadingBest"><img src="./assets/img/Spinner-1s-200px.gif" /></div>
+                            </div>
+                        </div>
+                        <div class="new-releases-carousel carousel my-5">
+                            <h2 class="text-center mb-5">New Release</h2>
+                            <div class="row catalog-page-carousel justify-content-around " id="new-release">
+                                <div id="loadingNew"><img src="./assets/img/Spinner-1s-200px.gif" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="read-more-page " style="display: none;">
+                <div class="container">
+                    <div class="row justify-content-between " id="read-more-main">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="follow mb-5">
+        <div class="container">
+            <h2 class="col-12 text-center my-5">Follow us on social media!</h2>
+            <div class="row text-center">
+                <div class="follow-icons col-12 text-center">
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook fa-3x"></i></a>
+                    <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-3x ml-5"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-3x ml-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container-fluid p-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <img src="./assets/icon/logo-group.svg" alt="">
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="row">
+                        <div class="col-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent">Popular</li>
+                                <li class="list-group-item bg-transparent">A second item</li>
+                                <li class="list-group-item bg-transparent">A third item</li>
+                                <li class="list-group-item bg-transparent">And a fifth one</li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent">Popular</li>
+                                <li class="list-group-item bg-transparent">A second item</li>
+                                <li class="list-group-item bg-transparent">A third item</li>
+                                <li class="list-group-item bg-transparent">And a fifth one</li>
+                            </ul>
+                        </div>
+                        <div class="col-4">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item bg-transparent">Popular</li>
+                                <li class="list-group-item bg-transparent">A second item</li>
+                                <li class="list-group-item bg-transparent">A third item</li>
+                                <li class="list-group-item bg-transparent">And a fifth one</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- SLICK CAROUSEL CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <!-- font awsome  -->
+    <script src="https://kit.fontawesome.com/72fc72c8e8.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

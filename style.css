@@ -1,0 +1,388 @@
+*::selection{
+    background-color: #871214;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #b30000;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7a0202;
+  }
+
+/*Menu style*/
+.nav-item .nav-link{
+    background:
+        linear-gradient(currentColor 0 0) 
+        bottom /var(--d, 0) 1px 
+        no-repeat;
+    transition:0.5s;
+}
+
+.nav-item .nav-link:hover {
+    --d: 100%;
+  }
+.nav-link:focus{
+    color: #FF8B00 !important;
+    font-weight: 700;
+    outline: none;
+}
+/*Menu ends here*/
+
+/* Home and General */
+.nav {
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+}
+.cursor-pointer:hover{
+    cursor:pointer;
+    pointer-events: auto;
+}
+.line {
+  background-color: #720418;
+  width: 25px;
+  height: 3px;
+  display: block;
+  transition: 0.4s;
+  margin-bottom: 5px;
+}
+
+header {
+  border-bottom: 2px solid whitesmoke;
+}
+
+.active{
+    color: #FF8B00 !important;
+    font-weight: 700;
+}
+
+.btn-primary
+{
+    background-color:#FF8B00 ;
+    border: none;
+
+}
+
+.btn-primary:hover, #searchButton:hover, #sendButton:hover
+{
+    background-color: #a40606;
+    background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+
+}
+
+.follow-icons a i 
+{
+    color: #1D1102;
+}
+
+footer
+{
+    background-color: #391F00;
+    height: fit-content;
+}
+
+.list-group
+{
+    color: #fff;
+}
+
+.fa-facebook:hover{
+    color: #4064ac;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.fa-twitter:hover{
+    color: #1c9cea;
+    -moz-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.fa-instagram:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+            /* Also define standard property for compatibility */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#joinBookBtn
+{
+    background-color: #FF8B00;
+}
+ 
+/* Home page - catalog section  */
+#catalog-home-list  .card:hover {
+    /*  Making button bigger on hover  */
+      transform: scale(1.1) perspective(1px)
+      
+    }
+  
+    #catalog-home-list  .card{
+      transition: all .5s ease-in-out;
+    }
+
+/*Contact page style starts here*/
+#contact-text{
+    color: #000;
+
+    font-size: 50px;
+
+    font-size: 30px;  /* Semra elave eledi*/
+
+}
+#sendButton, #searchButton{
+    transition: all 0.5s;
+    border: none;
+    background-color: orange;
+    padding: 1vw 2vh;
+    color: #fff;
+}
+
+
+
+.list-group-item{
+    color: #fff;
+    cursor: pointer;
+}
+
+.fab{
+    transition: all;
+    transition-duration: 0.8;
+    cursor: pointer;}
+
+input
+{
+    border: 1px solid rgb(150, 148, 148) ;
+    border-radius: 5px;
+}
+/*Catalog page style starts here*/
+.book-catalog
+{
+    list-style: none;
+}
+.nav-link{
+    border: none;
+    background-color: transparent;
+    color: 1D1102;
+}
+.card
+{
+    height: fit-content;
+    /* margin-right: 60px; */
+}
+
+.card img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card .new-book {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 1;
+    display: inline-block;
+    padding: 4px;
+    background: #DC3545;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+  }
+
+
+button.slick-arrow {
+    border: none !important;
+    background: none !important;
+  }
+button.slick-arrow img {
+    width: 50px;
+    height: 50px;
+  }
+ button.slick-prev {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+  }
+ button.slick-next {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+  }
+ button.slick-prev-header {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+  }
+ button.slick-next-header {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    outline: none;
+  }
+.slick-dots{
+    display: none !important;
+}
+.readButton{
+    transition: all 0.5s;
+    border: none;
+    background-color: orange;
+    padding: 1vw 2vh;
+    color: #fff;
+    width: 100%;
+    font-size: 12px;
+}
+.all-books h2,.follow h2{
+    font-size: 1.5rem;
+}
+
+/* Catalog page card design */
+.catalog-page-carousel .card {
+    max-width: 35ch;
+   padding: 144px 0 0 0;
+    background-size: cover;
+    color: white !important;
+    /* background-image: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg); */
+    transition: transform ease 250ms;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.catalog-page-carousel .card:hover {
+    transform: scale(1.05);
+}
+
+.catalog-page-carousel .card-body {
+    padding: 1.5rem;
+    background: linear-gradient(rgb(0 0 0 / 0),
+            rgb(0 0 0 / 0.25) 15%,
+            rgb(0 0 0 / 1));
+}
+
+
+@media (hover: hover), (prefers-reduced-motion: no-preference) {
+    .catalog-page-carousel .card-body {
+        transform: translateY(60%);
+        transition: transform 500ms ease;
+    }
+
+    .catalog-page-carousel .card:hover .card-body {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+    .catalog-page-carousel .card-body>*:not(.card-title) {
+        opacity: 0;
+        transition: opacity 1200ms linear 400ms;
+    }
+
+    .catalog-page-carousel .card:hover .card-body>*:not(.card-title) {
+        opacity: 1;
+    }
+
+    .catalog-page-carousel .card-title::after {
+        content: "";
+        position: absolute;
+        left: -1.5rem;
+        top: 100%;
+        height: 3px;
+        width: calc(100% + 1.5rem);
+        transform: scaleX(0);
+        transition: transform 200ms ease;
+        transform-origin: left;
+    }
+
+    .catalog-page-carousel .card:hover .card-title::after {
+        transition: transform 500ms ease;
+        transform: scaleX(1);
+    }
+}
+
+.catalog-page-carousel .card-title {
+    position: relative;
+    width: max-content;
+  } 
+
+/* Read more page style */
+.back-btn{
+    width: 70px;
+    height: 35px;
+    color: white;
+    border-radius: 10px !important; /* alinmadi */
+    margin-bottom: 70px;
+    display: block;
+}
+.back-btn .fa-caret-left{
+    color: white;
+}
+.year{
+    background-color: #207eca;
+    color: #fff;
+    padding: 4px;
+    border-radius:10px ;
+    font-size: 12px;
+    font-weight: bold;
+}
+.img-fluid {
+    width:100%;
+    height:auto;
+    object-fit:cover;
+    object-position:50% 50%;
+}
+
+/*
+    Search page design
+*/
+#found{
+    background-color: #871214;
+    color: #fff;
+    padding: 1vh 2vw;
+    height: fit-content;
+}
+
+#resultContainer{
+    overflow: auto;
+    box-shadow: 0px 8px 5px #888, 0px -8px 5px #888;
+}
+
+#foundBookDescription{
+    overflow: hidden;
+}
+
+#description{
+    overflow: hidden;
+}
+
+#loading, #loadingAll, #loadingBest, #loadingNew{
+    display: flex;
+    justify-content: center;
+}
+
+#loading, #loadingAll img, #loadingBest img, #loadingNew img{
+    max-width: 100px;
+}
